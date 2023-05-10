@@ -160,10 +160,14 @@ body {
 </body>
 <script>
     function closeWebView() {
-    var message = {
-        type: 'buttonClicked'
-    };
-    window.parent.postMessage(message, '*');
+    // var message = {
+    //     type: 'buttonClicked'
+    // };
+
+    // onclick="window.parent.postMessage({type: 'close'}, '*');"
+
+
+    window.parent.postMessage({type: 'close'}, '*');
 
       // window.parent.postMessage('closeWebView', '*');
       // window.ReactNativeWebView.postMessage({ type: 'myEvent', data: { foo: 'bar' } }, '*');
