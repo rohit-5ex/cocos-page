@@ -154,6 +154,7 @@ body {
 <div class="footer">
   <h2>Footer</h2>
   <button onclick="closeWebView()">Close WebView</button>
+  <button id="myButton" >Close WebView New</button>
 
 </div>
 
@@ -173,6 +174,15 @@ body {
       // window.ReactNativeWebView.postMessage({ type: 'myEvent', data: { foo: 'bar' } }, '*');
       console.log("Event Passed.")
     }
+
+    function sendMessageToGame(message) {
+    // Use a custom scheme to differentiate the messages
+    window.location.href = 'mygame://' + message;
+}
+var button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    sendMessageToGame('ButtonClicked');
+});
 </script>
 
 </html>
