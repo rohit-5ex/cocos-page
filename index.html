@@ -178,6 +178,7 @@ body {
     function sendMessageToGame(message) {
     // Use a custom scheme to differentiate the messages
     window.parent.postMessage('ButtonClicked', '*');
+    console.log("Event Passed ButtonClicked.")
 
 }
 var button = document.getElementById('myButton');
