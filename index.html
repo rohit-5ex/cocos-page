@@ -177,7 +177,8 @@ body {
 
     function sendMessageToGame(message) {
     // Use a custom scheme to differentiate the messages
-    window.location.href = 'mygame://' + message;
+    window.parent.postMessage('ButtonClicked', '*');
+
 }
 var button = document.getElementById('myButton');
 button.addEventListener('click', function() {
