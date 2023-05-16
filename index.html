@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>Page Title</title>
@@ -154,6 +155,7 @@ body {
   <h2>Footer</h2>
   <button onclick="closeWebView()">Close WebView</button>
   <button id="myButton" >Close WebView New</button>
+  <button id="myButton2" onclick="close2()" >Close Test</button>
 
 </div>
 
@@ -174,7 +176,9 @@ body {
       console.log("Event Passed.")
     }
 
-
+function close2(){
+  parent.TestCode();
+}
 
 function sendToCocos(message) {
     // Call a JavaScript interface function defined in the Cocos Creator game
