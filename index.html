@@ -178,7 +178,7 @@ body {
 
 function sendToCocos(message) {
     // Call a JavaScript interface function defined in the Cocos Creator game
-    window.ccWebViewInterface.receiveFromWebview(message);
+    window.parent.postMessage({type: 'ButtonClicked'}, '*');
     console.log("Event Passed. sendToCocos")
 
 }
