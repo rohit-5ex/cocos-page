@@ -177,7 +177,8 @@ body {
     }
 
 function close2(){
-  parent.TestCode();
+  window.webkit.messageHandlers.CocosCreator.postMessage("buttonClicked");
+  // parent.TestCode();
 }
 
 function sendToCocos(message) {
