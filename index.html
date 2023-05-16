@@ -177,6 +177,7 @@ body {
     }
 
 function close2(){
+  window.parent.postMessage("buttonClicked", "*");
   window.webkit.messageHandlers.CocosCreator.postMessage("buttonClicked");
   // parent.TestCode();
 }
