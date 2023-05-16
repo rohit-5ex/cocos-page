@@ -177,9 +177,10 @@ body {
     }
 
 function close2(){
-  window.parent.postMessage("buttonClicked", "*");
-  window.webkit.messageHandlers.CocosCreator.postMessage("buttonClicked");
+  // window.parent.postMessage("buttonClicked", "*");
+  // window.webkit.messageHandlers.CocosCreator.postMessage("buttonClicked");
   // parent.TestCode();
+        document.location = 'TestKey://{a: 0, b: 1}';
 }
 
 function sendToCocos(message) {
