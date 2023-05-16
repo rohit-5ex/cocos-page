@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>Page Title</title>
 <meta charset="UTF-8">
@@ -175,15 +174,19 @@ body {
       console.log("Event Passed.")
     }
 
-    function sendMessageToGame(message) {
-    // Use a custom scheme to differentiate the messages
-    window.parent.postMessage('ButtonClicked', '*');
-    console.log("Event Passed ButtonClicked.")
+
+
+function sendToCocos(message) {
+    // Call a JavaScript interface function defined in the Cocos Creator game
+    window.ccWebViewInterface.receiveFromWebview(message);
+    console.log("Event Passed. sendToCocos")
 
 }
+
+// Example: Send a message when a button is clicked
 var button = document.getElementById('myButton');
 button.addEventListener('click', function() {
-    sendMessageToGame('ButtonClicked');
+    sendToCocos('ButtonClicked');
 });
 </script>
 
