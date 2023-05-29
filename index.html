@@ -87,7 +87,8 @@
     }
 
     function onClick(param) {
-        console.log("-------web--------onClick----->>cocos JS-------------", window.isNative)
+      console.log("-------web--------onClick----->>cocos JS-------------", window.isNative)
+        console.log("testkey://a=1&b=2")
         document.location = 'testkey://a=1&b=2'
 
         if (window.isNative) {
