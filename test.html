@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cocos web</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: rgb(94, 94, 94);
+        }
+        div {
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        iframe{
+            width: 50%;
+            height: 80%;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        button {
+            position: absolute;
+            width: 200px;
+            height: 30px;
+            background: red;
+            top: 2px;
+            right: 20%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="iframeID" src="http://www.baidu.com" frameborder="0"></iframe>
+    <div id="text"></div>
+    <button type="button" onclick="onClick()">Trigger cocos to close webView</button>
+</body>
+<script>
+    let iframeWeb = document.getElementById("iframeID");
+    function onClick(param) {
+        console.log("-------web--------onClick----->>cocos JS-------------", window.isNative)
+        if (window.isNative) {
+            //android or ios
+            document.location = 'testkey://a=1&b=2'
+        } else {
+            // browser, send a message to cocos
+            parent.postMessage("------------hello!-----cocos---------", "*")
+        }
+    }
+</script>
+
+</html>
