@@ -92,13 +92,13 @@
         // document.location = 'testkey://a=1&b=2'
         //document.location = 'https://5exceptions.com'
 
-        if (window.isNative) {
+        //if (window.isNative) {
             //android or ios
             document.location = 'testkey://a=1&b=2'
-        } else {
+        //} else {
             // browser, send a message to cocos
-            parent.postMessage("------------hello!-----cocos---------", "*")
-        }
+          //  parent.postMessage("------------hello!-----cocos---------", "*")
+       // }
     }
 </script>
 
