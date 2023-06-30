@@ -4,9 +4,9 @@
     <style>
         #poster {
             position: absolute;
-            top: 0;
-            left: 100px;
-            width: 300px; /* Adjust the width as needed */
+            top: 50%;
+            left: %;
+            width: auto; /* Adjust the width as needed */
             height: auto; /* Adjust the height as needed */
         }
 
@@ -22,10 +22,12 @@
         }
     </style>
 </head>
-<body>
-    <div id="poster">
+<body style="background-color:'white';">
+	<center>
+    <div>
         <img src="https://bulma.io/images/placeholders/480x800.png" alt="Poster Image">
     </div>
+    </center>
 
     <div id="close-button" onclick="javascript:window.parent.postMessage({type: 'close'}, '*');">Close</div>
 
