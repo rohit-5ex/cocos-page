@@ -26,6 +26,9 @@
 <body style="background-color:'white';">
 	<center>
     <div>
+        <input type="button" value="Trigger" onclick="onClick()"/>
+    </div>
+    <div>
         <a href="https://example.com"><img src="https://bulma.io/images/placeholders/480x800.png" alt="Poster Image"></a>
     </div>
     </center>
@@ -34,4 +37,8 @@
 
     
 </body>
+    function onClick () {
+        // One of them sets up the URL scheme
+        document.location = 'testkey://a=1&b=2';
+    }
 </html>
