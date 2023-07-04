@@ -21,12 +21,24 @@
             z-index: 9999;
             font-size:28px;
         }
+
+	#trigger-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            z-index: 9999;
+            font-size:30px;
+        }
     </style>
 </head>
 <body style="background-color:'white';">
 	<center>
     <div>
-        <input type="button" value="Trigger" onclick="onClick()"/>
+        <input id="trigger-button" type="button" value="Trigger" onclick="onClick()"/>
     </div>
     <div>
         <a href="https://example.com"><img src="https://bulma.io/images/placeholders/480x800.png" alt="Poster Image"></a>
