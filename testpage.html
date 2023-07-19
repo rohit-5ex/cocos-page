@@ -33,6 +33,18 @@
             z-index: 9999;
             font-size:30px;
         }
+	    
+	#url-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            z-index: 9999;
+            font-size:30px;
+        }
     </style>
 </head>
 <body style="background-color:white;">
@@ -49,6 +61,9 @@
 
     <!-- Your close button -->
     <div id="close-button" onclick="closeButtonClicked()">Close</div>
+
+ <div id="url-button" onclick="closeButtonClicked()">URL</div>
+
 
     <script>
         function onClick() {
