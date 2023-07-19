@@ -70,7 +70,7 @@
             // One of them sets up the URL scheme
             // document.location = 'testkey://a=1&b=2';
 		    const url = 'https://www.w3schools.com/typescript/';
-            document.location = `testkey://a=${encodeURIComponent(url)}&b=2`;
+            document.location = `testkey://uri=${encodeURIComponent(url)}`;
         }
 
         function closeButtonClicked() {
